@@ -111,8 +111,8 @@ var json2go = function() {
     getSerializeFunction: function(type) {
       var indentation = this.getIndentation();
       var rendered =  `func Serialize(t ${type}) string {\n`
-      rendered +=     `${indentation}json, _ := json.Marshal(t)\n`
-      rendered +=     `${indentation}return string(json)\n`
+      rendered +=     `${indentation}j, _ := json.Marshal(t)\n`
+      rendered +=     `${indentation}return string(j)\n`
       rendered +=     `}`
 
       return rendered
